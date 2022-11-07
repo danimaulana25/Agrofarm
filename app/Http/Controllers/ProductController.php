@@ -16,7 +16,7 @@ class ProductController extends Controller
     {
         return view('admin.produk.index', [
             'title' => 'Product',
-            'product' => Product::all()
+            'product' => Product::paginate(4)
         ]);
     }
 

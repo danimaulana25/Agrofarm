@@ -39,7 +39,7 @@
                                             {{asset('storage/'.$item -> image)}}
                                           @endif" width="100px">
                         </td>
-                        <td>{{$item -> deskripsi}}</td>
+                        <td>{{ Str::limit($item -> deskripsi, 50) }}</td>
                         <td>
                             <a class="btn btn-info" href="/adminproduk/{{$item -> id}}"><i class="bi bi-eye"></i></a>
                             <a class="btn btn-primary" href="/adminproduk/{{$item -> id}}/edit"><i class="bi bi-pencil-square"></i></a>
@@ -53,6 +53,10 @@
                     @endforeach
                 </tbody>
             </table>
+        </div>
+        <br>
+        <div class="d-flex justify-content-start">
+            {{$product -> links()}}
         </div>
     </div>
 </div>
