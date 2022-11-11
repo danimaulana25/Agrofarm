@@ -28,7 +28,8 @@
                         <label for="exampleInputPassword1" class="form-label">Grade</label>
                         <input value="{{$kategori -> grade}}" type="Textarea" class="form-control" id="exampleInputPassword1" name="grade">
                     </div>
-                    <button type="submit" class="btn btn-primary">Simpan</button>
+                    <button type="submit" class="btn btn-primary mt-3">Simpan</button>
+                    <a class="btn btn-success mt-3" href="/adminkategori">Kembali</a>
                 </form>
             </div>
         </div>
