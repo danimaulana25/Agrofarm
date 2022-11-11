@@ -2,7 +2,7 @@
     <div class="container py-5">
         <div class="row g-5">
             <div class="col-lg-3 col-md-6">
-                <h1 class="fw-bold text-primary mb-4">AGRO<span class="text-white">FARM</span></h1>
+                <h1 class="fw-bold text-primary mb-4">AGRO<span class="text-white">COFFEE</span></h1>
                 <p>PT Agrofarm Globalindo Investama , merupakan suatu perusahaan ekspor kopi yang berada di kota mojokerto.</p>
                 <div class="d-flex pt-2">
                     <a class="btn btn-square me-1" href=""><i class="fab fa-twitter"></i></a>
@@ -12,40 +12,38 @@
                 </div>
             </div>
             <div class="col-lg-3 col-md-6">
-                <h5 class="text-light mb-4">Address</h5>
+                <h5 class="text-light mb-4">Alamat</h5>
                 <p><i class="fa fa-map-marker-alt me-3"></i>Dusun Simbarinigin, Kel/Desa Pandansari, RT 02/RW 10, Simbaran, Simbaringin, Kec. Kutorejo, Kab. Mojokerto, Jawa Timur 61383
                 </p>
-                <p><i class="fa fa-phone-alt me-3"></i>+085122837354</p>
-                <p><i class="fa fa-envelope me-3"></i>agrofarmglobalindo@gmail.com</p>
+                <p><i class="fa fa-phone-alt me-3"></i>+62-857-3351-9756</p>
+                <p><i class="fa fa-envelope me-3"></i>care.agrofarm@gmail.com</p>
             </div>
             <div class="col-lg-3 col-md-6">
                 <h5 class="text-light mb-4">Quick Links</h5>
                 <a class="btn btn-link" href="/about">About Us</a>
                 <a class="btn btn-link" href="/journey">Journey</a>
-                <a class="btn btn-link" href="">Feature</a>
+                <!-- <a class="btn btn-link" href="">Feature</a> -->
                 <a class="btn btn-link" href="">Product</a>
-                <a class="btn btn-link" href="">Team</a>
+                <!-- <a class="btn btn-link" href="">Team</a> -->
                 <a class="btn btn-link" href="">Contact</a>
             </div>
-            <div class="col-lg-3 col-md-6">
+            <!-- <div class="col-lg-3 col-md-6">
                 <h5 class="text-light mb-4">Newsletter</h5>
                 <p>Dolor amet sit justo amet elitr clita ipsum elitr est.</p>
                 <div class="position-relative mx-auto" style="max-width: 400px;">
                     <input class="form-control bg-transparent w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
                     <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>
                 </div>
-            </div>
+            </div> -->
         </div>
     </div>
     <div class="container-fluid copyright">
         <div class="container">
             <div class="row">
                 <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                    &copy; <a href="#">2022 Agrofarm Globalindo</a>, All Right Reserved.
+                    &copy; <a href="#">2022 Agrofarm Globalindo Investama</a>, All Right Reserved.
                 </div>
                 <div class="col-md-6 text-center text-md-end">
-                    <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-                    Designed By <a href="https://htmlcodex.com">HTML Codex</a>
                 </div>
             </div>
         </div>
