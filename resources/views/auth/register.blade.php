@@ -81,7 +81,8 @@
             <div class="bg-light rounded p-4 p-sm-5 my-4 mx-3">
                 <div class="d-flex align-items-center justify-content-between mb-3">
                     <a href="/" class="">
-                        <h3 class="text-primary"><i class="fas fa-city me-2"></i>AGROFARM</h3>
+                        <h3 class="text" style="color: #379237;"><i class="fas fa-city me-2" style="color: #379237;"></i>AGRO<span class="inline-text" style="color: #3C2317;">FARM</span>
+
                     </a>
                     <h3>Sign Up</h3>
                 </div>

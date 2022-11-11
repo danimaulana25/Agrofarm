@@ -76,7 +76,7 @@
             <div class="bg-light rounded p-4 p-sm-5 my-4 mx-3">
                 <div class="d-flex align-items-center justify-content-between mb-3">
                     <a href="/" class="">
-                        <h3 class="text-primary"><i class="fas fa-city me-2"></i>AGROFARM</h3>
+                        <h3 class="text" style="color: #379237;"><i class="fas fa-city me-2" style="color: #379237;"></i>AGRO<span class="inline-text" style="color: #3C2317;">FARM</span>
                     </a>
                     <h3>Sign In</h3>
                 </div>
@@ -84,12 +84,23 @@
                     @csrf
                     <div class="form-floating mb-3">
                         <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" name="email">
+                        @error('email')
+                        <div class="alert alert-danger" role="alert">
+                            Email atau Password yang anda masukkan salah!!
+                        </div>
+                        @enderror
                         <label for="floatingInput">Email address</label>
                     </div>
                     <div class="form-floating mb-4">
                         <input type="password" class="form-control" id="floatingPassword" placeholder="Password" name="password">
+                        @error('password')
+                        <div class="alert alert-danger" role="alert">
+                            Email atau Password yang anda masukkan salah!!
+                        </div>
+                        @enderror
                         <label for="floatingPassword">Password</label>
                     </div>
+
                     <button type="submit" class="btn btn-primary py-3 w-100 mb-4">Sign In</button>
                 </form>
                 <p class="text-center mb-0">Don't have an Account? <a href="/register">Sign Up</a></p>
