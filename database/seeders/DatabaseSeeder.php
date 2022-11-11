@@ -22,8 +22,9 @@ class DatabaseSeeder extends Seeder
         ]);
         $this->call([
             ProductSeeder::class,
-            CategorySeeder::class
-
+            CategorySeeder::class,
+            PengambilanSeeder::class,
+            // PenjualanSeeder::class
         ]);
         // \App\Models\User::factory(10)->create();
     }
