@@ -38,6 +38,7 @@
                         <input value="{{$product -> deskripsi}}" type="Textarea" class="form-control" id="exampleInputPassword1" name="deskripsi">
                     </div>
                     <button type="submit" class="btn btn-primary">Simpan</button>
+                    <a class="btn btn-success " href="/adminproduk">Kembali</a>
                 </form>
             </div>
         </div>
