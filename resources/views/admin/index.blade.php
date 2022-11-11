@@ -6,73 +6,63 @@
     <div class="row g-4">
         <div class="col-sm-6 col-xl-3">
             <div class="bg-light rounded d-flex align-items-center justify-content-between p-4">
-                <i class="fa fa-chart-line fa-3x text-primary"></i>
+                <i class="fa fa-chart-line fa-3x" style="color: #379237;"></i>
                 <div class="ms-3">
-                    <p class="mb-2">Today Sale</p>
-                    <h6 class="mb-0">$1234</h6>
+                    <p class="mb-2">Total Product</p>
+                    <h6 class="mb-0">{{$jumlah_produk}} produk</h6>
                 </div>
             </div>
         </div>
         <div class="col-sm-6 col-xl-3">
             <div class="bg-light rounded d-flex align-items-center justify-content-between p-4">
-                <i class="fa fa-chart-bar fa-3x text-primary"></i>
+                <i class="fa fa-chart-bar fa-3x" style="color: #379237;"></i>
                 <div class="ms-3">
-                    <p class="mb-2">Total Sale</p>
-                    <h6 class="mb-0">$1234</h6>
+                    <p class="mb-2">Total Kategori</p>
+                    <h6 class="mb-0">{{$jumlah_kategori}} kategori</h6>
                 </div>
             </div>
         </div>
         <div class="col-sm-6 col-xl-3">
             <div class="bg-light rounded d-flex align-items-center justify-content-between p-4">
-                <i class="fa fa-chart-area fa-3x text-primary"></i>
+                <i class="fa fa-chart-area fa-3x" style="color: #379237;"></i>
                 <div class="ms-3">
-                    <p class="mb-2">Today Revenue</p>
-                    <h6 class="mb-0">$1234</h6>
+                    <p class="mb-2">Data Pengambil</p>
+                    <h6 class="mb-0">{{$jumlah_pengambil}} Pengambil</h6>
                 </div>
             </div>
         </div>
         <div class="col-sm-6 col-xl-3">
             <div class="bg-light rounded d-flex align-items-center justify-content-between p-4">
-                <i class="fa fa-chart-pie fa-3x text-primary"></i>
+                <i class="fa fa-chart-pie fa-3x" style="color: #379237;"></i>
                 <div class="ms-3">
-                    <p class="mb-2">Total Revenue</p>
-                    <h6 class="mb-0">$1234</h6>
+                    <p class="mb-2">Data Penjualan</p>
+                    <h6 class="mb-0">{{$jumlah_terjual}} terjual</h6>
                 </div>
             </div>
         </div>
     </div>
+
 </div>
 <!-- Sale & Revenue End -->
 
-
+<br><br>
 <!-- Sales Chart Start -->
 <div class="container-fluid pt-4 px-4">
-    <div class="row g-4">
-        <div class="col-sm-12 col-xl-6">
-            <div class="bg-light text-center rounded p-4">
-                <div class="d-flex align-items-center justify-content-between mb-4">
-                    <h6 class="mb-0">Worldwide Sales</h6>
-                    <a href="">Show All</a>
-                </div>
-                <canvas id="worldwide-sales"></canvas>
-            </div>
+    <div class="card shadow mb-4">
+        <div class="card-header py-3">
+            <h6 class="m-0 font-weight-bold" style="color: #379237;">Welcome Message !!</h6>
         </div>
-        <div class="col-sm-12 col-xl-6">
-            <div class="bg-light text-center rounded p-4">
-                <div class="d-flex align-items-center justify-content-between mb-4">
-                    <h6 class="mb-0">Salse & Revenue</h6>
-                    <a href="">Show All</a>
-                </div>
-                <canvas id="salse-revenue"></canvas>
-            </div>
+        <div class="card-body">
+            <p>Selamat Datang {{ Auth::user()->level }} <b class="text-uppercase ">{{ Auth::user()->nama }}, </b></p>
+            <p class="mb-0">Sistem Informasi Pencatatan Produk Pada Perusahaan "PT AGROFARM GLOBALINDO INVESTAMA" <br> Jangan Berikan Email dan Password Anda pada Siapapun!!!</p>
         </div>
-    </div>
-</div>
+    </div><br><br>
+</div><br><br><br><br><br><br>
 <!-- Sales Chart End -->
 
 
 <!-- Recent Sales Start -->
-<div class="container-fluid pt-4 px-4">
+<!-- <div class="container-fluid pt-4 px-4">
     <div class="bg-light text-center rounded p-4">
         <div class="d-flex align-items-center justify-content-between mb-4">
             <h6 class="mb-0">Recent Salse</h6>
@@ -141,12 +131,12 @@
             </table>
         </div>
     </div>
-</div>
+</div> -->
 <!-- Recent Sales End -->
 
 
 <!-- Widgets Start -->
-<div class="container-fluid pt-4 px-4">
+<!-- <div class="container-fluid pt-4 px-4">
     <div class="row g-4">
         <div class="col-sm-12 col-md-6 col-xl-4">
             <div class="h-100 bg-light rounded p-4">
@@ -263,6 +253,6 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->
 <!-- Widgets End -->
 @endsection
