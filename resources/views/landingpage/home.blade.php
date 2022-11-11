@@ -1,5 +1,5 @@
 @extends('layouts.main')
-@section('title'){{$title}} @endsection
+@section('title'){{'Agrofarm Globalindo - Home'}} @endsection
 @section('content')
 <!-- Begin Page Content -->
 <!-- Carousel Start -->
@@ -7,15 +7,15 @@
     <div id="header-carousel" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img class="w-100" src="/assets/img/home-kopi-2.jpg" alt="Image">
+                <img class="w-100" src="/assets/img/cofeehome.jpeg" alt="Image">
                 <div class="carousel-caption">
                     <div class="container">
                         <div class="row justify-content-center">
                             <div class="col-lg-7 pt-5">
-                                <h1 class="display-4 text-white mb-3 animated slideInDown">PT AGROFARM GLOBALINDO INVESTAMA</h1>
-                                <p class="fs-5 text-white-50 mb-5 animated slideInDown">Indonesian coffee supplier specialist to the Middle East</p>
+                                <h1 class="display-4 text-white mb-3  animated slideInDown">AUTHENTIC INDONESIAN COFFEE BEANS SUPPLIER</h1>
+                                <p class="fs-5 mb-5 animated slideInDown" style="color: #379237 ; ">Indonesian Coffee Supplier Specialist to the Middle East</p>
                                 <a class="btn btn-primary py-2 px-3 animated slideInDown" href="">
-                                    Learn More
+                                    <b>Learn More</b>
                                     <div class="d-inline-flex btn-sm-square bg-white text-primary rounded-circle ms-2">
                                         <i class="fa fa-arrow-right"></i>
                                     </div>
@@ -26,13 +26,13 @@
                 </div>
             </div>
             <div class="carousel-item">
-                <img class="w-100" src="/assets/img/home-kopi.jpg" alt="Image">
+                <img class="w-100" src="/assets/img/coffeehome2.jpg" alt="Image">
                 <div class="carousel-caption">
                     <div class="container">
                         <div class="row justify-content-center">
                             <div class="col-lg-7 pt-5">
-                                <h1 class="display-4 text-white mb-3 animated slideInDown">PT AGROFARM GLOBALINDO INVESTAMA</h1>
-                                <p class="fs-5 text-white-50 mb-5 animated slideInDown">Indonesian coffee supplier specialist to the Middle East</p>
+                                <h1 class="display-4 text-white mb-3 animated slideInDown">AUTHENTIC INDONESIAN COFFEE BEANS SUPPLIER</h1>
+                                <p class="fs-5 mb-5 animated slideInDown" style="color: #379237 ; ">Indonesian Coffee Supplier Specialist to the Middle East</p>
                                 <a class="btn btn-primary py-2 px-3 animated slideInDown" href="">
                                     Learn More
                                     <div class="d-inline-flex btn-sm-square bg-white text-primary rounded-circle ms-2">
@@ -64,21 +64,18 @@
         <div class="row g-5">
             <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
                 <div class="position-relative overflow-hidden h-100" style="min-height: 400px;">
-                    <img class="position-absolute w-100 h-100 pt-5 pe-5" src="/assets/img/about-1.jpg" alt="" style="object-fit: cover;">
-                    <img class="position-absolute top-0 end-0 bg-white ps-2 pb-2" src="/assets/img/about-kopi-2.jpg" alt="" style="width: 200px; height: 200px;">
+                    <img class="position-absolute w-100 h-100 pt-5 pe-5" src="/assets/img/about1.jpg" alt="" style="object-fit: cover;">
+                    <img class="position-absolute top-0 end-0 bg-white ps-2 pb-2" src="/assets/img/about2.jpg" alt="" style="width: 200px; height: 200px;">
                 </div>
             </div>
             <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
                 <div class="h-100">
-
                     <div class="d-inline-block rounded-pill bg-secondary text-primary py-1 px-3 mb-3">About Us</div>
-
-                    <h1 class="display-6 mb-5">We Help People In Need Around The World</h1>
+                    <h1 class="display-6 mb-5">PT Agrofarm Globalindo Investama</h1>
                     <div class="bg-light border-bottom border-5 border-primary rounded p-4 mb-4">
-                        <p class="text-dark mb-2">Aliqu diam amet diam et eos. Clita erat ipsum et lorem sed stet lorem sit clita duo justo erat amet</p>
-                        <span class="text-primary">Jhon Doe, Founder</span>
+                        <p class="text-dark mb-2">Indonesia mempunyai hasil alam yang kaya, membuat kita berupaya untuk memberikan hasil alam Indonesia terbaik salah satunya kopi Indonesia yang memiliki ciri khas dan kualitas yang bermutu.</p>
                     </div>
-                    <p class="mb-5">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet</p>
+                    <p class="mb-5">Agro Coffee adalah pemasok biji kopi Arabica dan Robusta Java dari gunung Semeru, Gunung Arjuna, Gunung Kawi dari Indonesia. Dalam mencari jenis kopi terbaik di tingkat Jawa pada ketinggian 1200 - 1300 mdpl, kami memilih kopi terbaik dengan melakukan proses tanam, petik dan panen dengan cara terbaik untuk menghasilkan hasil berkualitas untuk ditawarkan untuk pembeli.</p>
                     <a class="btn btn-primary py-2 px-3 me-3" href="">
                         Learn More
                         <div class="d-inline-flex btn-sm-square bg-white text-primary rounded-circle ms-2">
@@ -98,12 +95,77 @@
 </div>
 <!-- About End -->
 
+<!-- Feature Start -->
+<div class="container-xxl py-5">
+    <div class="container">
+        <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
+            <div class="d-inline-block rounded-pill bg-secondary text-primary py-1 px-3 mb-3">What We Do</div>
+            <h1 class="display-6 mb-5">Learn More About Our Commitment</h1>
+        </div>
+        <div class="row g-4 justify-content-center">
+            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="service-item bg-white text-center h-100 p-4 p-xl-5">
+                    <img class="img-fluid mb-4" src="/assets/img/integrity.png" alt="">
+                    <h4 class="mb-3">Integritas</h4>
+                    <p class="mb-4">Pondasi utama kami berpegang teguh dengan mengatakan kebenaran, menepati janji dan memperlakukan orang dengan adil dan hormat untuk menjaga kepercayaan.</p>
+                    <!-- <a class="btn btn-outline-primary px-3" href="">
+                        Learn More
+                        <div class="d-inline-flex btn-sm-square bg-primary text-white rounded-circle ms-2">
+                            <i class="fa fa-arrow-right"></i>
+                        </div>
+                    </a> -->
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                <div class="service-item bg-white text-center h-100 p-4 p-xl-5">
+                    <img class="img-fluid mb-4" src="/assets/img/quality.png" alt="">
+                    <h4 class="mb-3">Kualitas</h4>
+                    <p class="mb-4">Kualitas ditunjukkan dengan memberikan layanan terbaik, memilih biji kualitas terbaik untuk kepuasan pelanggan serta support kebutuhan pelanggan dengan memberikan kuantitas dan kualitas yang dibutuhkan.</p>
+                    <!-- <a class="btn btn-outline-primary px-3" href="">
+                        Learn More
+                        <div class="d-inline-flex btn-sm-square bg-primary text-white rounded-circle ms-2">
+                            <i class="fa fa-arrow-right"></i>
+                        </div>
+                    </a> -->
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                <div class="service-item bg-white text-center h-100 p-4 p-xl-5">
+                    <img class="img-fluid mb-4" src="/assets/img/commitment.png" alt="">
+                    <h4 class="mb-3">Komitmen</h4>
+                    <p class="mb-4">Berkomitmen untuk melayani sebagai hak istimewa yang diberikan kepada pelanggan dengan profesional, bertanggung jawab, tuntas dan akurat.</p>
+                    <!-- <a class="btn btn-outline-primary px-3" href="">
+                        Learn More
+                        <div class="d-inline-flex btn-sm-square bg-primary text-white rounded-circle ms-2">
+                            <i class="fa fa-arrow-right"></i>
+                        </div>
+                    </a> -->
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                <div class="service-item bg-white text-center h-100 p-4 p-xl-5">
+                    <img class="img-fluid mb-4" src="/assets/img/inovation.png" alt="">
+                    <h4 class="mb-3">Inovasi</h4>
+                    <p class="mb-4">Menciptakan, merancangkan dan mengembangkan produk dan layanan yang memiliki kualitas dan daya tarik yang tinggi untuk menjadi preferensi pelanggan sebagai bentuk antusiasme kami dalam inovasi.</p>
+                    <!-- <a class="btn btn-outline-primary px-3" href="">
+                        Learn More
+                        <div class="d-inline-flex btn-sm-square bg-primary text-white rounded-circle ms-2">
+                            <i class="fa fa-arrow-right"></i>
+                        </div>
+                    </a> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Feature End -->
+
 
 <!-- Causes Start -->
 <div class="container-xxl bg-light my-5 py-5">
     <div class="container py-5">
         <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
-            <div class="d-inline-block rounded-pill bg-secondary text-primary py-1 px-3 mb-3">Feature Causes</div>
+            <div class="d-inline-block rounded-pill bg-secondary text-primary py-1 px-3 mb-3">Know More About Our Product Process</div>
             <h1 class="display-6 mb-5">Every Child Deserves The Opportunity To Learn</h1>
         </div>
         <div class="row g-4 justify-content-center">
@@ -128,7 +190,7 @@
                         </div>
                     </div>
                     <div class="position-relative mt-auto">
-                        <img class="img-fluid" src="/assets/img/courses-1.jpg" alt="">
+                        <img class="img-fluid" src="/assets/img/featureCause1.jpeg" alt="">
                         <div class="causes-overlay">
                             <a class="btn btn-outline-primary" href="">
                                 Read More
@@ -161,7 +223,7 @@
                         </div>
                     </div>
                     <div class="position-relative mt-auto">
-                        <img class="img-fluid" src="/assets/img/courses-2.jpg" alt="">
+                        <img class="img-fluid" src="/assets/img/featureCause2.jpeg" alt="">
                         <div class="causes-overlay">
                             <a class="btn btn-outline-primary" href="">
                                 Read More
@@ -194,7 +256,7 @@
                         </div>
                     </div>
                     <div class="position-relative mt-auto">
-                        <img class="img-fluid" src="/assets/img/courses-3.jpg" alt="">
+                        <img class="img-fluid" src="/assets/img/featureCause3.jpeg" alt="">
                         <div class="causes-overlay">
                             <a class="btn btn-outline-primary" href="">
                                 Read More
@@ -212,61 +274,8 @@
 <!-- Causes End -->
 
 
-<!-- Service Start -->
-<div class="container-xxl py-5">
-    <div class="container">
-        <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
-            <div class="d-inline-block rounded-pill bg-secondary text-primary py-1 px-3 mb-3">What We Do</div>
-            <h1 class="display-6 mb-5">Learn More What We Do And Get Involved</h1>
-        </div>
-        <div class="row g-4 justify-content-center">
-            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                <div class="service-item bg-white text-center h-100 p-4 p-xl-5">
-                    <img class="img-fluid mb-4" src="/assets/img/icon-1.png" alt="">
-                    <h4 class="mb-3">Child Education</h4>
-                    <p class="mb-4">Tempor ut dolore lorem kasd vero ipsum sit eirmod sit. Ipsum diam justo sed vero dolor duo.</p>
-                    <a class="btn btn-outline-primary px-3" href="">
-                        Learn More
-                        <div class="d-inline-flex btn-sm-square bg-primary text-white rounded-circle ms-2">
-                            <i class="fa fa-arrow-right"></i>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                <div class="service-item bg-white text-center h-100 p-4 p-xl-5">
-                    <img class="img-fluid mb-4" src="/assets/img/icon-2.png" alt="">
-                    <h4 class="mb-3">Medical Treatment</h4>
-                    <p class="mb-4">Tempor ut dolore lorem kasd vero ipsum sit eirmod sit. Ipsum diam justo sed vero dolor duo.</p>
-                    <a class="btn btn-outline-primary px-3" href="">
-                        Learn More
-                        <div class="d-inline-flex btn-sm-square bg-primary text-white rounded-circle ms-2">
-                            <i class="fa fa-arrow-right"></i>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                <div class="service-item bg-white text-center h-100 p-4 p-xl-5">
-                    <img class="img-fluid mb-4" src="/assets/img/icon-3.png" alt="">
-                    <h4 class="mb-3">Pure Drinking Water</h4>
-                    <p class="mb-4">Tempor ut dolore lorem kasd vero ipsum sit eirmod sit. Ipsum diam justo sed vero dolor duo.</p>
-                    <a class="btn btn-outline-primary px-3" href="">
-                        Learn More
-                        <div class="d-inline-flex btn-sm-square bg-primary text-white rounded-circle ms-2">
-                            <i class="fa fa-arrow-right"></i>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- Service End -->
-
-
 <!-- Donate Start -->
-<div class="container-fluid donate my-5 py-5" data-parallax="scroll" data-image-src="/assets/img/carousel-2.jpg">
+<!-- <div class="container-fluid donate my-5 py-5" data-parallax="scroll" data-image-src="/assets/img/carousel-2.jpg">
     <div class="container py-5">
         <div class="row g-5 align-items-center">
             <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
@@ -316,12 +325,12 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->
 <!-- Donate End -->
 
 
 <!-- Team Start -->
-<div class="container-xxl py-5">
+<!-- <div class="container-xxl py-5">
     <div class="container">
         <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
             <div class="d-inline-block rounded-pill bg-secondary text-primary py-1 px-3 mb-3">Team Members</div>
@@ -394,20 +403,20 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->
 <!-- Team End -->
 
 
-<!-- Testimonial Start -->
+<!-- Prouduct Start -->
 <div class="container-xxl py-5">
     <div class="container">
         <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
-            <div class="d-inline-block rounded-pill bg-secondary text-primary py-1 px-3 mb-3">Testimonial</div>
+            <div class="d-inline-block rounded-pill bg-secondary text-primary py-1 px-3 mb-3">Produk</div>
             <h1 class="display-6 mb-5">Trusted By Thousands Of People And Nonprofits</h1>
         </div>
         <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.1s">
             <div class="testimonial-item text-center">
-                <img class="img-fluid bg-light rounded-circle p-2 mx-auto mb-4" src="/assets/img/testimonial-1.jpg" style="width: 100px; height: 100px;">
+                <img class="img-fluid bg-light rounded-circle p-2 mx-auto mb-4" src="/assets/img/produk/Robusta.jpg" style="width: 100px; height: 100px;">
                 <div class="testimonial-text rounded text-center p-4">
                     <p>Clita clita tempor justo dolor ipsum amet kasd amet duo justo duo duo labore sed sed. Magna ut diam sit et amet stet eos sed clita erat magna elitr erat sit sit erat at rebum justo sea clita.</p>
                     <h5 class="mb-1">Doner Name</h5>
@@ -415,7 +424,7 @@
                 </div>
             </div>
             <div class="testimonial-item text-center">
-                <img class="img-fluid bg-light rounded-circle p-2 mx-auto mb-4" src="/assets/img/testimonial-2.jpg" style="width: 100px; height: 100px;">
+                <img class="img-fluid bg-light rounded-circle p-2 mx-auto mb-4" src="/assets/img/produk/Arabica.jpg" style="width: 100px; height: 100px;">
                 <div class="testimonial-text rounded text-center p-4">
                     <p>Clita clita tempor justo dolor ipsum amet kasd amet duo justo duo duo labore sed sed. Magna ut diam sit et amet stet eos sed clita erat magna elitr erat sit sit erat at rebum justo sea clita.</p>
                     <h5 class="mb-1">Doner Name</h5>
@@ -423,7 +432,7 @@
                 </div>
             </div>
             <div class="testimonial-item text-center">
-                <img class="img-fluid bg-light rounded-circle p-2 mx-auto mb-4" src="/assets/img/testimonial-3.jpg" style="width: 100px; height: 100px;">
+                <img class="img-fluid bg-light rounded-circle p-2 mx-auto mb-4" src="/assets/img/produk/Robusta.jpg" style="width: 100px; height: 100px;">
                 <div class="testimonial-text rounded text-center p-4">
                     <p>Clita clita tempor justo dolor ipsum amet kasd amet duo justo duo duo labore sed sed. Magna ut diam sit et amet stet eos sed clita erat magna elitr erat sit sit erat at rebum justo sea clita.</p>
                     <h5 class="mb-1">Doner Name</h5>
@@ -433,5 +442,5 @@
         </div>
     </div>
 </div>
-<!-- Testimonial End -->
+<!-- Product End -->
 @endsection
