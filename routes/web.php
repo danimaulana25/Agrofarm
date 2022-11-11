@@ -1,8 +1,17 @@
 <?php
 
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\CetakPdfController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\LaporanController;
+use App\Http\Controllers\PengambilanController;
+use App\Http\Controllers\PenjualanController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\TransaksiController;
+use App\Models\Category;
+use App\Models\Pengambilan;
+use App\Models\Penjualan;
+use App\Models\Product;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -35,10 +44,23 @@ use Illuminate\Support\Facades\Route;
 
 Route::middleware(['auth', 'isAdmin'])->group(function () {
     Route::get('/dashboard', function () {
-        return view('admin.index');
+        return view('admin.index', [
+            'jumlah_produk' => Product::count(),
+            'jumlah_kategori' => Category::count(),
+            'jumlah_pengambil' => Pengambilan::count(),
+            'jumlah_terjual' => Penjualan::count()
+        ]);
     });
+    Route::get('/transaksipenjualan/{id}', [TransaksiController::class, 'penjualan']);
     Route::resource('/adminproduk', ProductController::class);
     Route::resource('/adminkategori', CategoryController::class);
+    Route::resource('/adminpengambilan', PengambilanController::class);
+    Route::get('/pengambilan_pdf', [CetakPdfController::class, 'cetak_pdf']);
+    Route::get('/pengambilan/search', [PengambilanController::class, 'search']);
+    Route::resource('/adminpenjualan', PenjualanController::class);
+    Route::get('/penjualan_pdf', [CetakPdfController::class, 'cetakpdf']);
+    Route::get('/penjualan/search', [PenjualanController::class, 'search']);
+    Route::resource('/laporan', LaporanController::class);
 });
 
 
@@ -62,7 +84,9 @@ Route::get('/feature', function () {
     return view('landingpage.feature');
 });
 Route::get('/product', function () {
-    return view('landingpage.product');
+    return view('landingpage.product', [
+        'produk' => Product::all()
+    ]);
 });
 Route::get('/team', function () {
     return view('landingpage.team');
