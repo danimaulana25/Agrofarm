@@ -24,6 +24,7 @@ class DatabaseSeeder extends Seeder
             ProductSeeder::class,
             CategorySeeder::class,
             PengambilanSeeder::class,
+            MessageSeeder::class,
             // PenjualanSeeder::class
         ]);
         // \App\Models\User::factory(10)->create();

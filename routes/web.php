@@ -4,6 +4,7 @@ use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\CetakPdfController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LaporanController;
+use App\Http\Controllers\MessageController;
 use App\Http\Controllers\PengambilanController;
 use App\Http\Controllers\PenjualanController;
 use App\Http\Controllers\ProductController;
@@ -61,6 +62,7 @@ Route::middleware(['auth', 'isAdmin'])->group(function () {
     Route::get('/penjualan_pdf', [CetakPdfController::class, 'cetakpdf']);
     Route::get('/penjualan/search', [PenjualanController::class, 'search']);
     Route::resource('/laporan', LaporanController::class);
+    Route::resource('/adminmessage', MessageController::class);
 });
 
 

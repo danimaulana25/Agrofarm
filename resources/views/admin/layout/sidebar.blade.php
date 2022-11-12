@@ -17,6 +17,7 @@
         <div class="navbar-nav w-100">
             <a href="/dashboard" class="nav-item nav-link {{Request::is('adminhome') ? 'active' : ''}}"><i class="fa fa-tachometer-alt me-2"></i>Dashboard</a>
             <a href="/" class="nav-item nav-link {{Request::is('/') ? 'active' : ''}}"><i class="fas fa-laptop me-2"></i>Landingpage</a>
+            <a href="/adminmessage" class="nav-item nav-link {{Request::is('/adminmessage') ? 'active' : ''}}"><i class="far fa-envelope-open me-2"></i>Message</a>
             <a href="/adminproduk" class="nav-item nav-link {{Request::is('adminproduk') ? 'active' : ''}}"><i class="fas fa-coffee me-2"></i>Product</a>
             <a href="/adminkategori" class="nav-item nav-link {{Request::is('adminkategori') ? 'active' : ''}}"><i class="fas fa-leaf me-2"></i>Kategori</a>
             <a href="/adminpengambilan" class="nav-item nav-link {{Request::is('adminpengambilan') ? 'active' : ''}}"><i class="fas fa-people-carry me-2 "></i>Pengambilan</a>
