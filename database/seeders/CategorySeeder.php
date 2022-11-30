@@ -18,27 +18,9 @@ class CategorySeeder extends Seeder
             [
                 [
                     'nama' => 'Robusta',
-                    'grade' => 'Grade 1',
-                ],
-                [
-                    'nama' => 'Robusta',
-                    'grade' => 'Grade 2',
-                ],
-                [
-                    'nama' => 'Robusta',
-                    'grade' => 'Grade 3',
-                ],
-                [
-                    'nama' => 'Robusta',
-                    'grade' => 'Grade 4',
                 ],
                 [
                     'nama' => 'Arabica',
-                    'grade' => 'Grade 1',
-                ],
-                [
-                    'nama' => 'Arabica',
-                    'grade' => 'Spesoalty Grade',
                 ],
             ]
         );
