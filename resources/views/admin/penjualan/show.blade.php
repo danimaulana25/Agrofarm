@@ -11,7 +11,7 @@
                 <ul class="list-group list-group-flush">
                     <li class="list-group-item"><b>No : </b>{{$penjualan ->id}}</li>
                     <li class="list-group-item"><b>Nama Pembeli : </b>{{$penjualan ->nama_pembeli}}</li>
-                    <li class="list-group-item"><b>Nama Pengambil : </b>{{$penjualan -> pengambilan -> nama_pengambil}}</li>
+                    <li class="list-group-item"><b>Nama Pengirim : </b>{{$penjualan -> pengambilan -> nama_pengambil}}</li>
                     <li class="list-group-item"><b>Kategori : </b>{{$penjualan -> pengambilan -> category->nama}}</li>
                     <li class="list-group-item"><b>Jumlah : </b>{{$penjualan -> pengambilan -> jumlah}}</li>
                     <li class="list-group-item"><b>Lokasi : </b>{{$penjualan -> lokasi}}</li>

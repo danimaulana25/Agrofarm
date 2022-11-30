@@ -23,7 +23,7 @@
                         <input value="{{$penjualan -> nama_pembeli}}" type="text" class="form-control" id="exampleInputtext1" aria-describedby="textHelp" name="nama_pembeli">
                     </div>
                     <div class="mb-3">
-                        <label for="exampleInputPassword1" class="form-label">Nama Pengambil</label>
+                        <label for="exampleInputPassword1" class="form-label">Nama Pengirim</label>
                         <input type="text" value="{{$penjualan->pengambilan -> nama_pengambil}}" class="form-control" id="pengambilan_id" ariadescribedby="pengambilan_id" readonly>
                     </div>
                     <div class="mb-3">
@@ -42,11 +42,11 @@
                     </div>
                     <div class="mb-3">
                         <label for="exampleInputPassword1" class="form-label">Tanggal Ambil</label>
-                        <input value="{{$penjualan -> tanggal_jual}}" type="date" class="form-control" id="exampleInputPassword1" name="tanggal_jual">
+                        <input value="{{$penjualan -> pengambilan ->tanggal_ambil}}" type="date" class="form-control" id="exampleInputPassword1" name="tanggal_ambil">
                     </div>
                     <div class="mb-3">
                         <label for="exampleInputPassword1" class="form-label">Tanggal jual</label>
-                        <input type="date" value="{{$penjualan->tanggal_ambil}}" class="form-control" id="exampleInputPassword1" name="tanggal_ambil">
+                        <input type="date" value="{{$penjualan->tanggal_jual}}" class="form-control" id="exampleInputPassword1" name="tanggal_jual">
                     </div>
                     <div class="form-group">
                         <label for="status" class="mb-2">Status</label>

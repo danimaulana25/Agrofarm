@@ -22,7 +22,7 @@
                         <input type="text" class="form-control" id="exampleInputtext1" aria-describedby="textHelp" name="nama_pembeli">
                     </div>
                     <div class="mb-3">
-                        <label for="exampleInputEmail1" class="form-label">Pengambil</label>
+                        <label for="exampleInputEmail1" class="form-label">Pengirim</label>
                         <input type="text" value="{{$penjualan->nama_pengambil}}" class="form-control" id="penjualan_id" ariadescribedby="penjualan_id" readonly>
 
                     </div>

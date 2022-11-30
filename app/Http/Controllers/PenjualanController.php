@@ -6,6 +6,7 @@ use App\Models\Category;
 use App\Models\Pengambilan;
 use App\Models\Penjualan;
 use Illuminate\Http\Request;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class PenjualanController extends Controller
 {
@@ -57,8 +58,8 @@ class PenjualanController extends Controller
         $pengambilan = Pengambilan::where('id', $request->pengambilan_id)->first();
         $pengambilan->status = 2;
         $pengambilan->save();
-
-        return redirect('/adminpenjualan')->with('toast_success', 'Penjualan berhasil ditambahkan!');
+        Alert::success('Success', 'Penjualan berhasil ditambah');
+        return redirect('/adminpenjualan');
     }
 
     /**
@@ -112,8 +113,8 @@ class PenjualanController extends Controller
 
         ]);
         Penjualan::where('id', $id)->update($validatedata);
-
-        return redirect('/adminpenjualan')->with('toast_success', 'Penjualan berhasil diedit!');
+        Alert::success('Success', 'Penjualan berhasil diedit');
+        return redirect('/adminpenjualan');
     }
 
     /**
@@ -126,6 +127,7 @@ class PenjualanController extends Controller
     {
         $target = Penjualan::where('id', $id)->first();
         $target->delete();
+        Alert::success('Success', 'Penjualan berhasil dihapus');
         return redirect('/adminpenjualan');
     }
     public function search(Request $request)
