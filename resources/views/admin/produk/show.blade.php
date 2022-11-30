@@ -34,11 +34,20 @@
                 <ul class="list-group list-group-flush">
                     <li class="list-group-item"><b>No : </b>{{$product->id}}</li>
                     <li class="list-group-item"><b>Nama : </b>{{$product->nama}}</li>
+                    <li class="list-group-item"><b>Kategori : </b>{{$product->category -> nama}}</li>
                     <li class="list-group-item"><b>Gambar : </b><img src="@if (!$product -> image)
                                             {{ asset('/assets/img/produk/'.$product -> nama.'.jpg') }}
                                             @else
                                             {{asset('storage/'.$product -> image)}}
                                           @endif" alt="" height="150px" width="150px" class="rounded" style="object-fit: cover"></li>
+                    <li class="list-group-item"><b>Klasifikasi : </b>@if($product->status==1)
+                        <span class="badge bg-warning text-dark">Roasted</span>
+                        @elseif ($product->status==2)
+                        <span class="badge bg-success text-dark">Coffee Bean</span>
+                        @else
+                        <span class="badge bg-info">Powder Coffee</span>
+                        @endif
+                    </li>
                     <li class="list-group-item"><b>Deskripsi : </b>{{$product->deskripsi}}</li>
                 </ul>
                 <a class="btn btn-success mt-3" href="/adminproduk">Kembali</a>

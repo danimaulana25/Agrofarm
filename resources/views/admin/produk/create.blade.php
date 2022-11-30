@@ -24,8 +24,24 @@
                         </div>
                     </div>
                     <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label">Kategori</label>
+                        <select class="form-select" name="categories_id">
+                            @foreach ($kategori as $ctgr)
+                            <option value="{{ $ctgr->id }}">{{ $ctgr->nama }}</option>
+                            @endforeach
+                        </select>
+                    </div>
+                    <div class="mb-3">
                         <label for="formFile" class="form-label">Gambar</label>
                         <input class="form-control" type="file" id="formFile" name="image">
+                    </div>
+                    <div class="form-group">
+                        <label for="status" class="mb-2">Klasifikasi</label>
+                        <select class="form-select" name="status">
+                            <option value="1">Roasted</option>
+                            <option value="2">Coffee Bean</option>
+                            <option value="3">Powder</option>
+                        </select>
                     </div>
                     <div class="mb-3">
                         <label for="exampleInputPassword1" class="form-label">Deskripsi</label>

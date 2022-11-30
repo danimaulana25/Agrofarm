@@ -25,6 +25,14 @@
                         </div>
                     </div>
                     <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label">Kategori</label>
+                        <select class="form-select" name="categories_id">
+                            @foreach ($kategori as $ctgr)
+                            <option value="{{ $ctgr->id }}" @if($ctgr->id==$product->categories_id) selected @endif>{{ $ctgr->nama }}</option>
+                            @endforeach
+                        </select>
+                    </div>
+                    <div class="mb-3">
                         <label for="formFile" class="form-label">Gambar</label><br>
                         <img src="@if (!$product -> image)
                                             {{ asset('/assets/img/produk/'.$product -> nama.'.jpg') }}
@@ -32,6 +40,14 @@
                                             {{asset('storage/'.$product -> image)}}
                                           @endif" alt="" width="100px">
                         <input class="form-control" type="file" id="formFile" name="image">
+                    </div>
+                    <div class="form-group">
+                        <label for="status" class="mb-2">Klasifikasi</label>
+                        <select class="form-select" name="status">
+                            <option value="1" @if($product->status=="1") selected @endif>Roasted</option>
+                            <option value="2" @if($product->status=="2") selected @endif>Coffee Bean</option>
+                            <option value="3" @if($product->status=="3") selected @endif>Powder</option>
+                        </select>
                     </div>
                     <div class="mb-3">
                         <label for="exampleInputPassword1" class="form-label">Deskripsi</label>

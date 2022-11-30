@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Category;
 use App\Models\Product;
 use Illuminate\Http\Request;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class ProductController extends Controller
 {
@@ -16,7 +18,7 @@ class ProductController extends Controller
     {
         return view('admin.produk.index', [
             'title' => 'Product',
-            'product' => Product::paginate(4)
+            'product' => Product::paginate(6)
         ]);
     }
 
@@ -27,7 +29,9 @@ class ProductController extends Controller
      */
     public function create()
     {
-        return view('admin.produk.create');
+        return view('admin.produk.create', [
+            'kategori' => Category::all(),
+        ]);
     }
 
     /**
@@ -41,7 +45,9 @@ class ProductController extends Controller
 
         $validatedata = $request->validate([
             'nama' => 'required|string|max:255',
+            'categories_id' => 'required',
             'image' => 'image|file',
+            'status' => 'required',
             'deskripsi' => 'required',
 
         ]);
@@ -51,7 +57,9 @@ class ProductController extends Controller
         }
         Product::create($validatedata);
 
-        return redirect('/adminproduk')->with('toast_success', 'Product berhasil ditambahkan!');
+        Alert::success('Success', 'Produk berhasil ditambah');
+
+        return redirect('/adminproduk');
     }
 
     /**
@@ -80,7 +88,8 @@ class ProductController extends Controller
         $target = Product::where('id', $id)->first();
         return view('admin.produk.edit', [
             'title' => 'Product',
-            'product' => $target
+            'product' => $target,
+            'kategori' => Category::all(),
         ]);
     }
 
@@ -95,7 +104,9 @@ class ProductController extends Controller
     {
         $validatedata = $request->validate([
             'nama' => 'required|string|max:255',
+            'categories_id' => 'required',
             'image' => 'image|file',
+            'status' => 'required',
             'deskripsi' => 'required',
 
         ]);
@@ -104,8 +115,9 @@ class ProductController extends Controller
             $validatedata['image'] = $request->file('image')->store('product', 'public');
         }
         Product::where('id', $id)->update($validatedata);
+        Alert::success('Success', 'Produk berhasil diedit');
 
-        return redirect('/adminproduk')->with('toast_success', 'Product berhasil diedit!');
+        return redirect('/adminproduk');
     }
 
     /**
@@ -114,11 +126,14 @@ class ProductController extends Controller
      * @param  \App\Models\Product  $product
      * @return \Illuminate\Http\Response
      */
+    public $delete_id;
+
+
     public function destroy(Product $product, $id)
     {
         $target = Product::where('id', $id)->first();
         $target->delete();
-
+        Alert::success('Success', 'Produk berhasil dihapus');
         return redirect('/adminproduk');
     }
 }

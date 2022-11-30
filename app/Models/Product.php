@@ -9,4 +9,13 @@ class Product extends Model
 {
     use HasFactory;
     protected $guarded = ['id'];
+
+    public function category()
+    {
+        return $this->belongsTo(Category::class, 'categories_id');
+    }
+    public function detail()
+    {
+        return $this->hasMany(DetailGrade::class);
+    }
 }
