@@ -26,9 +26,11 @@
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="/assets/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
 
     <!-- Template Stylesheet -->
     <link href="/assets/css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
 </head>
 
 <body>
@@ -69,6 +71,30 @@
 
     <!-- Template Javascript -->
     <script src="/assets/js/main.js"></script>
+
+    <div id="whatsbutton"></div>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+    <script src="{{asset('wa/dist/js/jquery.whatsbutton.min.js')}}"></script>
+    <link rel="stylesheet" href="{{asset('wa/dist/css/whatsbutton.min.css')}}">
+
+    @include('sweetalert::alert')
+
+
+
 </body>
+<script>
+    $(document).ready(function() {
+        $('#whatsbutton').whatsbutton({
+            position: "left",
+            name: "AGRO COFFEE",
+            avatar: "/assets/img/AgrofarmIcon.png",
+            status: "online",
+            messages: ["Hello there, welcome to Agrofarm Globalindo Investama. How can we help you ? 😀"],
+            placeholder: "Type here...",
+            defaultMessage: "Hello, I want to get information about the products.",
+            phone: "+6285733519756",
+        });
+    });
+</script>
 
 </html>

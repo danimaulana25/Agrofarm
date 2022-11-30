@@ -1,9 +1,12 @@
 <div class="container-fluid bg-dark text-white-50 footer mt-5 pt-5 wow fadeIn" data-wow-delay="0.1s">
     <div class="container py-5">
         <div class="row g-5">
-            <div class="col-lg-3 col-md-6">
-                <h1 class="fw-bold text-primary mb-4">AGRO<span class="text-white">COFFEE</span></h1>
-                <p>PT Agrofarm Globalindo Investama , merupakan suatu perusahaan ekspor kopi yang berada di kota mojokerto.</p>
+            <div class="col-lg-4 col-md-6">
+                <div class="d-flex">
+                    <img class="" src="/assets/img/logo.png" alt="" width="50px" height="50px ">
+                    <h1 class="fw-bold " style="color: #379237; ">AGRO<span class="text-white">COFFEE</span></h1>
+                </div>
+                <p>PT Agrofarm Globalindo Investama , is a coffee export company located in the city of Mojokerto.</p>
                 <div class="d-flex pt-2">
                     <a class="btn btn-square me-1" href=""><i class="fab fa-twitter"></i></a>
                     <a class="btn btn-square me-1" href=""><i class="fab fa-facebook-f"></i></a>
@@ -11,21 +14,22 @@
                     <a class="btn btn-square me-0" href=""><i class="fab fa-linkedin-in"></i></a>
                 </div>
             </div>
-            <div class="col-lg-3 col-md-6">
-                <h5 class="text-light mb-4">Alamat</h5>
+            <div class="col-lg-4 col-md-6">
+                <h5 class="text-light mb-4">Address</h5>
                 <p><i class="fa fa-map-marker-alt me-3"></i>Dusun Simbarinigin, Kel/Desa Pandansari, RT 02/RW 10, Simbaran, Simbaringin, Kec. Kutorejo, Kab. Mojokerto, Jawa Timur 61383
                 </p>
+                <p><i class="fa fa-phone-alt me-3"></i>+62-857-4175-3941</p>
                 <p><i class="fa fa-phone-alt me-3"></i>+62-857-3351-9756</p>
                 <p><i class="fa fa-envelope me-3"></i>care.agrofarm@gmail.com</p>
             </div>
-            <div class="col-lg-3 col-md-6">
+            <div class="col-lg-4 col-md-6">
                 <h5 class="text-light mb-4">Quick Links</h5>
                 <a class="btn btn-link" href="/about">About Us</a>
-                <a class="btn btn-link" href="/journey">Journey</a>
-                <!-- <a class="btn btn-link" href="">Feature</a> -->
-                <a class="btn btn-link" href="">Product</a>
+                <!-- <a class="btn btn-link" href="/journey">Journey</a> -->
+                <a class="btn btn-link" href="/feature">Feature</a>
+                <a class="btn btn-link" href="/product">Product</a>
                 <!-- <a class="btn btn-link" href="">Team</a> -->
-                <a class="btn btn-link" href="">Contact</a>
+                <a class="btn btn-link" href="/contact">Contact</a>
             </div>
             <!-- <div class="col-lg-3 col-md-6">
                 <h5 class="text-light mb-4">Newsletter</h5>

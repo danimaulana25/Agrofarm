@@ -14,9 +14,11 @@
     </div>
 
     <nav class="navbar navbar-expand-lg navbar-dark py-lg-0 px-lg-5 wow fadeIn" data-wow-delay="0.1s">
-        <a href="index.html" class="navbar-brand ms-4 ms-lg-0">
-            <!-- <img src="/assets/img/agrofarm-logo-3.png" alt="" width="250px" height="90px"> -->
-            <h1 class="fw-bold m-0" style="color: #379237;">AGRO<span class="text-white">COFFEE</span></h1>
+        <a href="/" class="navbar-brand ms-4 ms-lg-0">
+            <div class="d-flex">
+                <img class="" src="/assets/img/logo.png" alt="" width="50px" height="50px ">
+                <h1 class="fw-bold " style="color: #379237; ">AGRO<span class="text-white">COFFEE</span></h1>
+            </div>
         </a>
         <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
             <span class="navbar-toggler-icon"></span>
