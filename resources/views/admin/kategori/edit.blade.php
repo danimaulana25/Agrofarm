@@ -24,10 +24,10 @@
                         <div id="textHelp" class="form-text">
                         </div>
                     </div>
-                    <div class="mb-3">
+                    <!-- <div class="mb-3">
                         <label for="exampleInputPassword1" class="form-label">Grade</label>
                         <input value="{{$kategori -> grade}}" type="Textarea" class="form-control" id="exampleInputPassword1" name="grade">
-                    </div>
+                    </div> -->
                     <button type="submit" class="btn btn-primary mt-3">Simpan</button>
                     <a class="btn btn-success mt-3" href="/adminkategori">Kembali</a>
                 </form>

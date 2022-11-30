@@ -1,6 +1,7 @@
 @extends('admin.layout.main')
 @section('title'){{'Kategori'}} @endsection
 @section('content')
+@include('sweetalert::alert')
 <div class="container-fluid pt-4 px-4">
     <div class="bg-light text-center rounded p-4">
         <div class="d-flex align-items-center justify-content-between mb-4">
@@ -22,7 +23,7 @@
                     <tr class="text-dark">
                         <th scope="col">No</th>
                         <th scope="col">Nama</th>
-                        <th scope="col">Jenis Grade</th>
+                        <!-- <th scope="col">Jenis Grade</th> -->
                         <th scope="col">Aksi</th>
                     </tr>
                 </thead>
@@ -31,7 +32,7 @@
                     <tr>
                         <td>{{$item -> id}} </td>
                         <td>{{$item -> nama}}</td>
-                        <td>{{$item -> grade}}</td>
+                        <!-- <td>{{$item -> grade}}</td> -->
                         <td>
                             <a class="btn btn-primary" href="/adminkategori/{{$item -> id}}/edit"><i class="bi bi-pencil-square"></i></a>
 
@@ -44,6 +45,10 @@
                     @endforeach
                 </tbody>
             </table>
+        </div>
+        <br>
+        <div class="d-flex justify-content-start">
+            {{$kategori -> links()}}
         </div>
     </div>
 </div>

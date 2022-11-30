@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Category;
 use Illuminate\Http\Request;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class CategoryController extends Controller
 {
@@ -16,7 +17,7 @@ class CategoryController extends Controller
     {
         return view('admin.kategori.index', [
             'title' => 'Kategori',
-            'kategori' => Category::all()
+            'kategori' => Category::paginate(6)
         ]);
     }
 
@@ -40,12 +41,11 @@ class CategoryController extends Controller
     {
         $validatedata = $request->validate([
             'nama' => 'required|string|max:255',
-            'grade' => 'required',
 
         ]);
         Category::create($validatedata);
-
-        return redirect('/adminkategori')->with('toast_success', 'Kategori berhasil ditambahkan!');
+        Alert::success('Success', 'Kategori berhasil ditambah');
+        return redirect('/adminkategori');
     }
 
     /**
@@ -85,12 +85,11 @@ class CategoryController extends Controller
     {
         $validatedata = $request->validate([
             'nama' => 'required|string|max:255',
-            'grade' => 'required',
 
         ]);
         Category::where('id', $id)->update($validatedata);
-
-        return redirect('/adminkategori')->with('toast_success', 'Kategori berhasil diedit!');
+        Alert::success('Success', 'Kategori berhasil diedit');
+        return redirect('/adminkategori');
     }
 
     /**
@@ -103,7 +102,7 @@ class CategoryController extends Controller
     {
         $target = Category::where('id', $id)->first();
         $target->delete();
-
+        Alert::success('Success', 'Kategori berhasil dihapus');
         return redirect('/adminkategori');
     }
 }
