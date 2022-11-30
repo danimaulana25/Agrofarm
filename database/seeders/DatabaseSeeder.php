@@ -21,10 +21,14 @@ class DatabaseSeeder extends Seeder
             'password' => bcrypt('agrofarm')
         ]);
         $this->call([
-            ProductSeeder::class,
             CategorySeeder::class,
+            ProductSeeder::class,
             PengambilanSeeder::class,
             MessageSeeder::class,
+            ProcessSeeder::class,
+            AboutSeeder::class,
+            FeatureSeeder::class,
+            DetailGradeSeeder::class,
             // PenjualanSeeder::class
         ]);
         // \App\Models\User::factory(10)->create();
