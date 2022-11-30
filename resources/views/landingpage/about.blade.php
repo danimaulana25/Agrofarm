@@ -20,28 +20,39 @@
 <!-- About Start -->
 <div class="container-xxl py-5">
     <div class="container">
+        @forelse($about as $item)
         <div class="row g-5">
             <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
                 <div class="position-relative overflow-hidden h-100" style="min-height: 400px;">
-                    <img class="position-absolute w-100 h-100 pt-5 pe-5" src="/assets/img/about1.jpg" alt="" style="object-fit: cover;">
-                    <img class="position-absolute top-0 end-0 bg-white ps-2 pb-2" src="/assets/img/about2.jpg" alt="" style="width: 200px; height: 200px;">
+                    <img class="position-absolute w-100 h-100 pt-5 pe-5" src="@if (!$item -> image)
+                                            {{ asset('/assets/img/about/'.$item -> judul.'.jpg') }}
+                                            @else
+                                            {{asset('storage/'.$item -> image)}}
+                                          @endif" alt="" style="object-fit: cover;">
+                    <img class="position-absolute top-0 end-0 bg-white ps-2 pb-2" src="@if (!$item -> image2)
+                                            {{ asset('/assets/img/about/'.$item -> id.'.jpg') }}
+                                            @else
+                                            {{asset('storage/'.$item -> image2)}}
+                                          @endif" alt="" style="width: 200px; height: 200px;">
                 </div>
             </div>
             <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
                 <div class="h-100">
                     <div class="d-inline-block rounded-pill bg-secondary text-primary py-1 px-3 mb-3">About Us</div>
-                    <h1 class="display-6 mb-5">PT Agrofarm Globalindo Investama</h1>
+                    <h1 class="display-6 mb-5">{{$item -> judul}}</h1>
                     <div class="bg-light border-bottom border-5 border-primary rounded p-4 mb-4">
-                        <p class="text-dark mb-2">Indonesia mempunyai hasil alam yang kaya, membuat kita berupaya untuk memberikan hasil alam Indonesia terbaik salah satunya kopi Indonesia yang memiliki ciri khas dan kualitas yang bermutu.</p>
+                        <p class="text-dark mb-2">{{$item -> head}}</p>
                     </div>
-                    <p class="mb-5">Agro Coffee adalah pemasok biji kopi Arabica dan Robusta Java dari gunung Semeru, Gunung Arjuna, Gunung Kawi dari Indonesia. Dalam mencari jenis kopi terbaik di tingkat Jawa pada ketinggian 1200 - 1300 mdpl, kami memilih kopi terbaik dengan melakukan proses tanam, petik dan panen dengan cara terbaik untuk menghasilkan hasil berkualitas untuk ditawarkan untuk pembeli.</p>
+                    <p>{{$item -> intro1}}</p>
+                    <p>{{$item -> intro2}}</p>
+                    <p>{{$item -> intro3}}</p>
                     <a class="btn btn-primary py-2 px-3 me-3" href="">
                         Learn More
                         <div class="d-inline-flex btn-sm-square bg-white text-primary rounded-circle ms-2">
                             <i class="fa fa-arrow-right"></i>
                         </div>
                     </a>
-                    <a class="btn btn-outline-primary py-2 px-3" href="">
+                    <a class="btn btn-outline-primary py-2 px-3" href="https://wa.me/6285733519756?text=Hello,I%20want%20to%20get%20information%20about%20the%20products.">
                         Contact Us
                         <div class="d-inline-flex btn-sm-square bg-primary text-white rounded-circle ms-2">
                             <i class="fa fa-arrow-right"></i>
@@ -50,6 +61,8 @@
                 </div>
             </div>
         </div>
+        @empty
+        @endforelse
     </div>
 </div>
 <!-- About End -->
@@ -94,19 +107,19 @@
                     <img class="img-fluid mb-4" src="/assets/img/commitment.png" alt="">
                     <h4 class="mb-3">Komitmen</h4>
                     <p class="mb-4">Berkomitmen untuk melayani sebagai hak istimewa yang diberikan kepada pelanggan dengan profesional, bertanggung jawab, tuntas dan akurat.</p>
-                    <!-- <a class="btn btn-outline-primary px-3" href="">
+                    <a class="btn btn-outline-primary px-3" href="">
                         Learn More
                         <div class="d-inline-flex btn-sm-square bg-primary text-white rounded-circle ms-2">
                             <i class="fa fa-arrow-right"></i>
                         </div>
                     </a> -->
-</div>
+<!-- </div> -->
 <!-- </div>
             <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
                 <div class="service-item bg-white text-center h-100 p-4 p-xl-5">
                     <img class="img-fluid mb-4" src="/assets/img/inovation.png" alt="">
                     <h4 class="mb-3">Inovasi</h4>
-                    <p class="mb-4">Menciptakan, merancangkan dan mengembangkan produk dan layanan yang memiliki kualitas dan daya tarik yang tinggi untuk menjadi preferensi pelanggan sebagai bentuk antusiasme kami dalam inovasi.</p> --> -->
+                    <p class="mb-4">Menciptakan, merancangkan dan mengembangkan produk dan layanan yang memiliki kualitas dan daya tarik yang tinggi untuk menjadi preferensi pelanggan sebagai bentuk antusiasme kami dalam inovasi.</p> -->
 <!-- <a class="btn btn-outline-primary px-3" href="">
                         Learn More
                         <div class="d-inline-flex btn-sm-square bg-primary text-white rounded-circle ms-2">
