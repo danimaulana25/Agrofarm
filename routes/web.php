@@ -1,17 +1,25 @@
 <?php
 
+use App\Http\Controllers\AboutController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\CetakPdfController;
+use App\Http\Controllers\DetailGradeController;
+use App\Http\Controllers\DetailProduct;
+use App\Http\Controllers\FeatureController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LaporanController;
 use App\Http\Controllers\MessageController;
 use App\Http\Controllers\PengambilanController;
 use App\Http\Controllers\PenjualanController;
+use App\Http\Controllers\ProcessController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\TransaksiController;
+use App\Models\About;
 use App\Models\Category;
+use App\Models\Feature;
 use App\Models\Pengambilan;
 use App\Models\Penjualan;
+use App\Models\Process;
 use App\Models\Product;
 use Illuminate\Support\Facades\Route;
 
@@ -55,6 +63,7 @@ Route::middleware(['auth', 'isAdmin'])->group(function () {
     Route::get('/transaksipenjualan/{id}', [TransaksiController::class, 'penjualan']);
     Route::resource('/adminproduk', ProductController::class);
     Route::resource('/adminkategori', CategoryController::class);
+    Route::resource('/admingrade', DetailGradeController::class);
     Route::resource('/adminpengambilan', PengambilanController::class);
     Route::get('/pengambilan_pdf', [CetakPdfController::class, 'cetak_pdf']);
     Route::get('/pengambilan/search', [PengambilanController::class, 'search']);
@@ -62,34 +71,48 @@ Route::middleware(['auth', 'isAdmin'])->group(function () {
     Route::get('/penjualan_pdf', [CetakPdfController::class, 'cetakpdf']);
     Route::get('/penjualan/search', [PenjualanController::class, 'search']);
     Route::resource('/laporan', LaporanController::class);
-    Route::resource('/adminmessage', MessageController::class);
+    Route::resource('/adminprocess', ProcessController::class);
+    Route::resource('/adminabout', AboutController::class);
+    Route::resource('/adminfeature', FeatureController::class);
 });
 
-
+//message 
+Route::resource('/adminmessage', MessageController::class);
 // Route Landingpage
 Route::get('/', function () {
     return view(
         'landingpage.home',
         [
-            'title' => 'home'
+            'title' => 'home',
+            'about' => About::all(),
+            'feature' => Feature::all(),
+            'process' => Process::all()
         ]
 
     );
 });
 Route::get('/about', function () {
-    return view('landingpage.about');
+    return view('landingpage.about', [
+        'about' => About::all()
+    ]);
 });
 Route::get('/journey', function () {
     return view('landingpage.journey');
 });
 Route::get('/feature', function () {
-    return view('landingpage.feature');
+    return view('landingpage.feature', [
+        'feature' => Feature::all(),
+        'process' => Process::all()
+    ]);
 });
 Route::get('/product', function () {
     return view('landingpage.product', [
-        'produk' => Product::all()
+        'produkR' => Product::where('status', '1')->get(),
+        'produkG' => Product::where('status', '2')->get(),
+        'produkP' => Product::where('status', '3')->get(),
     ]);
 });
+Route::get('/productdetail/{id}', [DetailProduct::class, 'show']);
 Route::get('/team', function () {
     return view('landingpage.team');
 });
