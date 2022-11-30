@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Message;
 use Illuminate\Http\Request;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class MessageController extends Controller
 {
@@ -16,7 +17,7 @@ class MessageController extends Controller
     {
         return view('admin.message.index', [
             'title' => 'Message',
-            'message' => Message::all()
+            'message' => Message::paginate(6)
         ]);
     }
 
@@ -47,7 +48,9 @@ class MessageController extends Controller
         ]);
         Message::create($validatedata);
 
-        return redirect('/contact')->with('toast_success', 'Message berhasil ditambahkan!');
+        Alert::success('Thanks you', 'your message has been delivered!');
+
+        return redirect('/contact');
     }
 
     /**
@@ -98,7 +101,7 @@ class MessageController extends Controller
     {
         $target = Message::where('id', $id)->first();
         $target->delete();
-
+        Alert::success('Success', 'Message berhasil dihapus');
         return redirect('/adminmessage');
     }
 }
