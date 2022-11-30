@@ -18,7 +18,7 @@
                 <form method="post" action="/adminpengambilan" id="myForm" enctype="multipart/form-data">
                     @csrf
                     <div class="mb-3">
-                        <label for="exampleInputEmail1" class="form-label">Nama Pengambil</label>
+                        <label for="exampleInputEmail1" class="form-label">Nama Pengirim</label>
                         <input type="text" class="form-control" id="exampleInputtext1" aria-describedby="textHelp" name="nama_pengambil">
                     </div>
                     <div class="mb-3">

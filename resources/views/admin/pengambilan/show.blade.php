@@ -10,7 +10,7 @@
             <div class="card-body">
                 <ul class="list-group list-group-flush">
                     <li class="list-group-item"><b>No : </b>{{$pengambilan-> id}}</li>
-                    <li class="list-group-item"><b>Nama Pengambil : </b>{{$pengambilan-> nama_pengambil}}</li>
+                    <li class="list-group-item"><b>Nama Pengirim : </b>{{$pengambilan-> nama_pengambil}}</li>
                     <li class="list-group-item"><b>Kategori : </b>{{$pengambilan-> category->nama}}</li>
                     <li class="list-group-item"><b>Jumlah : </b>{{$pengambilan-> jumlah}}</li>
                     <li class="list-group-item"><b>Lokasi : </b>{{$pengambilan->lokasi}}</li>

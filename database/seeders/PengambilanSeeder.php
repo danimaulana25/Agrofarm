@@ -17,34 +17,34 @@ class PengambilanSeeder extends Seeder
         DB::table('pengambilans')->insert(
             [
                 [
-                    'nama_pengambil' => 'Joko',
+                    'nama_pengambil' => 'Supplier',
                     'category_id' => 1,
                     'jumlah' => 20,
-                    'lokasi' => 'Malang',
+                    'lokasi' => 'Jl. Villa Bukit Tidar No.A4-294, Merjosari, Kecamatan Lowokwaru, Kota Malang 65144',
                     'tanggal_ambil' => '2022-10-20',
                     'status' => 1
                 ],
                 [
-                    'nama_pengambil' => 'Kasino',
+                    'nama_pengambil' => 'Supplier',
                     'category_id' => 2,
                     'jumlah' => 15,
-                    'lokasi' => 'Pasuruan',
+                    'lokasi' => 'Jl. Villa Bukit Tidar No.A4-294, Merjosari, Kecamatan Lowokwaru, Kota Malang 65144',
                     'tanggal_ambil' => '2022-10-12',
                     'status' => 1
                 ],
                 [
-                    'nama_pengambil' => 'Indro',
-                    'category_id' => 5,
+                    'nama_pengambil' => 'Supplier',
+                    'category_id' => 1,
                     'jumlah' => 22,
-                    'lokasi' => 'Surabaya',
+                    'lokasi' => 'Jl. Villa Bukit Tidar No.A4-294, Merjosari, Kecamatan Lowokwaru, Kota Malang 65144',
                     'tanggal_ambil' => '2022-10-19',
                     'status' => 1
                 ],
                 [
-                    'nama_pengambil' => 'Julie',
-                    'category_id' => 6,
+                    'nama_pengambil' => 'Supplier',
+                    'category_id' => 2,
                     'jumlah' => 23,
-                    'lokasi' => 'Mojokerto',
+                    'lokasi' => 'Jl. Villa Bukit Tidar No.A4-294, Merjosari, Kecamatan Lowokwaru, Kota Malang 65144',
                     'tanggal_ambil' => '2022-10-26',
                     'status' => 1
                 ],

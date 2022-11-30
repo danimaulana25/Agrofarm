@@ -1,6 +1,7 @@
 @extends('admin.layout.main')
 @section('title'){{'Pengambilan'}} @endsection
 @section('content')
+@include('sweetalert::alert')
 <div class="container-fluid pt-4 px-4">
     <div class="bg-light text-center rounded p-4">
         <div class="d-flex align-items-center justify-content-between mb-4">
@@ -35,11 +36,11 @@
                 <thead>
                     <tr class="text-dark">
                         <th scope="col">No</th>
-                        <th scope="col">Nama Pengambil</th>
+                        <th scope="col">Nama Pengirim</th>
                         <th scope="col">Kategori</th>
                         <th scope="col">Jumlah</th>
                         <th scope="col">Lokasi</th>
-                        <th scope="col">tanggal</th>
+                        <th scope="col">Tanggal</th>
                         <th scope="col">Status</th>
                         <th scope="col">Aksi</th>
                     </tr>
@@ -73,6 +74,10 @@
                     @endforeach
                 </tbody>
             </table>
+        </div>
+        <br>
+        <div class="d-flex justify-content-start">
+            {{$pengambilan -> links()}}
         </div>
     </div>
 </div>

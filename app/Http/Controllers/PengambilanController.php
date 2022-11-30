@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Category;
 use App\Models\Pengambilan;
 use Illuminate\Http\Request;
+use RealRashid\SweetAlert\Facades\Alert;
 use PDF;
 
 
@@ -19,7 +20,7 @@ class PengambilanController extends Controller
     {
         return view('admin.pengambilan.index', [
             'title' => 'Pengambilan',
-            'pengambilan' => Pengambilan::all()
+            'pengambilan' => Pengambilan::paginate(6)
         ]);
     }
 
@@ -32,7 +33,6 @@ class PengambilanController extends Controller
     {
         return view('admin.pengambilan.create', [
             'kategori' => Category::all()
-
         ]);
     }
 
@@ -54,8 +54,8 @@ class PengambilanController extends Controller
 
         ]);
         Pengambilan::create($validatedata);
-
-        return redirect('/adminpengambilan')->with('toast_success', 'Pengambilan berhasil ditambahkan!');
+        Alert::success('Success', 'Pengambilan berhasil ditambah');
+        return redirect('/adminpengambilan');
     }
 
     /**
@@ -109,8 +109,8 @@ class PengambilanController extends Controller
 
         ]);
         Pengambilan::where('id', $id)->update($validatedata);
-
-        return redirect('/adminpengambilan')->with('toast_success', 'Pengambilan berhasil diedit!');
+        Alert::success('Success', 'Pengambilan berhasil diedit');
+        return redirect('/adminpengambilan');
     }
 
     /**
@@ -123,6 +123,7 @@ class PengambilanController extends Controller
     {
         $target = Pengambilan::where('id', $id)->first();
         $target->delete();
+        Alert::success('Success', 'Pengambilan berhasil dihapus');
         return redirect('/adminpengambilan');
     }
     public function search(Request $request)

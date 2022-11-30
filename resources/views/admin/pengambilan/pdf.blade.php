@@ -25,7 +25,7 @@
         <thead>
             <tr>
                 <th>No</th>
-                <th>Nama Pengambil</th>
+                <th>Nama Pengirim</th>
                 <th>Kategori</th>
                 <th>Jumlah</th>
                 <th>Lokasi</th>
