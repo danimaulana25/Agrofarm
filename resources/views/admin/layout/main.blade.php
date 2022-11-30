@@ -29,6 +29,8 @@
 
     <!-- Template Stylesheet -->
     <link href="{{asset('admin/css/style.css')}}" rel="stylesheet">
+    @include('sweetalert::alert')
+
 </head>
 
 <body>
@@ -66,6 +68,7 @@
 
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="{{asset('admin/lib/chart/chart.min.js')}}"></script>
     <script src="{{asset('admin/lib/easing/easing.min.js')}}"></script>
@@ -75,10 +78,41 @@
     <script src="{{asset('admin/lib/tempusdominus/js/moment-timezone.min.js')}}"></script>
     <script src="{{asset('admin/lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js')}}"></script>
 
+    <!-- sweet alert delete script -->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+        $('.delete').click(function() {
+            // var productid = $(this).attr('data-id')
+            var form = $(this).closest("form");
+            Swal.fire({
+                title: 'Yakin?',
+                text: "Kamu akan menghapus data produk ini!",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Yes, delete it!'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    form.submit();
+                    // window.location = "/adminproduk/" + productid + ""
+                    Swal.fire(
+                        'Deleted!',
+                        'Data Berhasil Dihapus.',
+                        'success'
+                    )
+                }
+            })
+        });
+    </script>
+
+
+
     <!-- Template Javascript -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script> -->
     <script src="{{asset('admin/js/main.js')}}"></script>
 </body>
+
 
 </html>
