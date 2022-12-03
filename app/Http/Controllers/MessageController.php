@@ -48,7 +48,7 @@ class MessageController extends Controller
         ]);
         Message::create($validatedata);
 
-        Alert::success('Thanks you', 'your message has been delivered!');
+        Alert::success('Thank you', 'your message has been delivered!');
 
         return redirect('/contact');
     }
