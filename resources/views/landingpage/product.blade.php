@@ -31,7 +31,7 @@
             @forelse($produkG as $item)
             <div class="testimonial-item text-center">
                 <img class="img-fluid bg-light rounded-circle p-2 mx-auto mb-4" src="@if (!$item -> image)
-                                            {{ asset('/assets/img/produk/'.$item -> nama.'.jpeg') }}
+                                            {{ asset('/assets/img/produk/'.$item -> nama.'.jpg') }}
                                             @else
                                             {{asset('storage/'.$item -> image)}}
                                           @endif" style="width: 200px; height: 200px; ">
