@@ -88,13 +88,13 @@
                     <p>{{$item -> intro1}}</p>
                     <p>{{$item -> intro2}}</p>
                     <p>{{$item -> intro3}}</p>
-                    <a class="btn btn-primary py-2 px-3 me-3" href="/about">
+                    <a class="btn btn-primary py-2 px-3 m-2" href="/about">
                         Learn More
                         <div class="d-inline-flex btn-sm-square bg-white text-primary rounded-circle ms-2">
                             <i class="fa fa-arrow-right"></i>
                         </div>
                     </a>
-                    <a class="btn btn-outline-primary py-2 px-3" href="https://wa.me/6285733519756?text=Hello,I%20want%20to%20get%20information%20about%20the%20products.">
+                    <a class="btn btn-outline-primary py-2 px-3 m-2" href="https://wa.me/6285733519756?text=Hello,I%20want%20to%20get%20information%20about%20the%20products.">
                         Contact Us
                         <div class="d-inline-flex btn-sm-square bg-primary text-white rounded-circle ms-2">
                             <i class="fa fa-arrow-right"></i>
