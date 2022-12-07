@@ -72,7 +72,7 @@
             <div class="d-flex justify-content-start">
                 <form action="/penjualan/search" class="d-flex justify-content-start" method="GET">
                     <input type="search" class="form-control mr-sm-2" placeholder="Search" name="search">
-                    <button class="btn btn-primary btn-outline-light ms-2" name="SearchButton">Go</button>
+                    <button class="btn btn-primary btn-outline-light ms-2" type="submit">Go</button>
                 </form>
             </div>
         </div>

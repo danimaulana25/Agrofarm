@@ -133,9 +133,9 @@ class PenjualanController extends Controller
     public function search(Request $request)
     {
         if ($request->has('search')) {
-            $penjualan = Penjualan::where('nama_pembeli', 'LIKE', '%' . $request->search . '%')->get();
+            $penjualan = Penjualan::where('nama_pembeli', 'LIKE', '%' . $request->search . '%')->paginate(6);
         } else {
-            $penjualan = Penjualan::all();
+            $penjualan = Penjualan::paginate(6);
         }
         return view('admin.penjualan.index', ['penjualan' => $penjualan, 'pengambilan' => Pengambilan::all()]);
     }
