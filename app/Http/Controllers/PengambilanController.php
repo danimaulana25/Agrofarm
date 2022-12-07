@@ -129,9 +129,9 @@ class PengambilanController extends Controller
     public function search(Request $request)
     {
         if ($request->has('search')) {
-            $pengambilan = Pengambilan::where('nama_pengambil', 'LIKE', '%' . $request->search . '%')->get();
+            $pengambilan = Pengambilan::where('nama_pengambil', 'LIKE', '%' . $request->search . '%')->paginate(6);
         } else {
-            $pengambilan = Pengambilan::all();
+            $pengambilan = Pengambilan::paginate(6);
         }
         return view('admin.pengambilan.index', ['pengambilan' => $pengambilan]);
     }
