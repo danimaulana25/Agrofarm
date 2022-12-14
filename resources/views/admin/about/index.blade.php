@@ -42,10 +42,10 @@
                         <td>{{ Str::limit($item -> intro2, 30) }}</td>
                         <td>{{ Str::limit($item -> intro3, 30) }}</td>
                         <td>
-                            <img src="@if (!$item -> image)
+                            <img src="@if (!$item -> image1)
                                             {{ asset('/assets/img/about/'.$item -> judul.'.jpg') }}
                                             @else
-                                            {{asset('storage/'.$item -> image)}}
+                                            {{asset('storage/'.$item -> image1)}}
                                           @endif" width="100px">
                         </td>
                         <td>
